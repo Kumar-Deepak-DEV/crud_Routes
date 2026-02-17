@@ -6,13 +6,13 @@ app.use(express.json());
 
 const users = [
   { uid: 108716, name: "Aditya", totalSubj:14, bonus:20, attendance:80 },
-  { uid: 108429, name: "Deeppak", totalSubj:14, bonus:200, attendance:100 },
+  { uid: 108429, name: "Deepak", totalSubj:14, bonus:200, attendance:100 },
   { uid: 108428, name: "Ronit", totalSubj:14, bonus:10, attendance:75 },
   { uid: 108685, name: "Harshit", totalSubj:14, bonus:30, attendance:90 },
   { uid: 108412, name: "Tapan", totalSubj:14, bonus:32, attendance:89 },
 ];
 
-app.get("/user/:uid", (req, res) => {
+app.get("/users/:uid", (req, res) => {
   const userUid = Number(req.params.uid);
   const user = users.find(u => u.uid === userUid);
 
